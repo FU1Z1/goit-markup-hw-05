@@ -124,7 +124,7 @@ ul {
     color: #404BBF;
 }
 
-.header-link.active::before {
+.header-link.active::after {
     content: '';
     position: absolute;
     bottom: 0;
