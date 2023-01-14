@@ -277,6 +277,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
 }
 
 .main-images > .item {
@@ -298,8 +299,6 @@ ul {
 }
 
 .offer-list {
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
     width: 360px;
     height: 420px;
@@ -322,11 +321,13 @@ ul {
     display: block;
     text-decoration: none;
     transition: box-shadow var(--anim-fast);
+    width: 360px;
 } 
 
 .offer-link:hover, .offer-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border: 0.5px solid #F4F4FD;
+    transform: translateY(-100%);
 } 
 
 .offer-photo {
@@ -334,35 +335,38 @@ ul {
 } 
 
 .overlay {
-    position: absolute;
-    transition: transform var(--anim-fast);
-    transform: translateY(100%);
+    position: relative;
+    overflow: hidden;
     padding-top: 40px;
     padding-left: 32px;
     padding-right: 32px;
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 360px;
     height: 100%;
-    background-color: #4D5AE5;
 }
 
 .overlay-text {
+    width: 360px;
+    transition: transform var(--anim-fast);
+    transform: translateY(100%);
+    position: absolute;
     color: #F4F4FD;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-}
+    background-color: #4D5AE5;
+} 
 
 .offer-text {
+    width: 360px;
     border-left: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
     padding-top: 32px;
     padding-left: 16px;
     padding-bottom: 32px;
-}
+} 
 
 .offer-name {
     color: #2E2F42;
@@ -724,4 +728,15 @@ ul {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color var(--anim-fast);
+}
+
+.modal-btn:hover, .modal-btn:focus {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+}
+
+.modal-icon {
+    width: 100%;
+    height: 100%;
 }
